@@ -7,13 +7,15 @@ def register():
     if request.method == "POST":
         name = request.form["name"]
         email = request.form["email"]
+        phone = request.form["phone"]   # NEW FIELD
         event = request.form["event"]
 
         return f"""
         <h2>Registration Successful!</h2>
-        <p>Name: {name}</p>
-        <p>Email: {email}</p>
-        <p>Event: {event}</p>
+        <p><strong>Name:</strong> {name}</p>
+        <p><strong>Email:</strong> {email}</p>
+        <p><strong>Phone:</strong> {phone}</p>
+        <p><strong>Event:</strong> {event}</p>
         """
 
     return render_template("index.html")
