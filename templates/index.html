@@ -2,30 +2,113 @@
 <html>
 <head>
     <title>Event Registration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #667eea;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5a67d8;
+            transform: scale(1.03);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h2>Event Registration Form</h2>
+<div class="container">
+    <h1>Event Registration</h1>
 
     <form method="POST">
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
+        <label>Name:</label>
+        <input type="text" name="name" required>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
-
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        
         <label>Phone Number:</label><br>
         <input type="tel" name="phone" required><br><br>
 
-        <label>Select Event:</label><br>
-        <select name="event" required>
+        <label>Select Event:</label>
+        <select name="event">
+            <option value="Hackathon">Hackathon</option>
             <option value="Workshop">Workshop</option>
             <option value="Seminar">Seminar</option>
-            <option value="Hackathon">Hackathon</option>
-        </select><br><br>
+        </select>
 
         <button type="submit">Register</button>
     </form>
+
+    <div class="footer">
+        DevOps Assignment - Event Registration System
+    </div>
+</div>
 
 </body>
 </html>
